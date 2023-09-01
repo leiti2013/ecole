@@ -19,7 +19,7 @@ public class CursoRepository implements Repository<Curso, Long> {
         cursos = new LinkedHashSet<>();
     }
 
-    /*Padrão Singletn */
+    /* Padrão Singleton */
     public static CursoRepository of(){
         CursoRepository result = instance;
         if(Objects.nonNull( result) ){
