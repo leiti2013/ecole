@@ -7,7 +7,7 @@ import br.com.fiap.domain.repository.AlunoRepository;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Random;
-import java.util.regex.Pattern;
+
 
 public class AlunoService implements Service<Aluno, Long> {
 
@@ -39,10 +39,7 @@ public class AlunoService implements Service<Aluno, Long> {
     }
 
 
-    /**
-     * Gerando matricula randomicamente
-     * @return
-     */
+    /* Gerando matricula randomicamente */
     public String gerarMatricula() {
         Random r = new Random();
         var matricula = LocalDate.now().getYear() + "." + r.nextInt(1000, 9999) + "-" + r.nextInt(10, 99);
